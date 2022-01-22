@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>IP Address Tracker</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <header class="header">
+      <h1 class="header__title">IP Address Tracker</h1>
+  
+      <form action="" class="form">
+        <input type="number" placeholder="Search for any IP address or domain" name="location" class="form__input">
+        
+        <button type="submit" class="form__btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </header>
+    
+    <main class="main">
+      <div class="card">
+        <h2 class="card__title">IP Address</h2>
+        <div class="ip"></div>
+      </div>
+      
+      <div class="card">
+        <h2 class="card__title">Location</h2>
+        <div class="ip"></div>
+      </div>
+
+      <div class="card">
+        <h2 class="card__title">Timezone</h2>
+        <div class="ip">UTC <!-- add offset value dynamically using the API --></div>
+      </div>
+
+      <div class="card">
+        <h2 class="card__title">ISP</h2>
+        <div class="ip"></div>
+      </div>
+    </main>
+  </section>
+
+  <section class="map"></section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">iXiref</a>.
+  </div>
+</body>
+</html>
