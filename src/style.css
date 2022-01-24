@@ -21,6 +21,10 @@ body {
   font-size: var(--font-s);
   font-family: 'Rubik', sans-serif;
 }
+input {
+  font-family: 'Rubik', sans-serif;
+  color: var(--v-dark-gray);
+}
 
 /* Containers */
 /* Containers */
@@ -31,6 +35,18 @@ body {
   background: url("/images/pattern-bg.png") no-repeat;
   background-size: 400% 100%;
   background-position: 55% 100%;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .top {
+    background-size: 300% 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .top {
+    height: 35vh;
+    background-size: cover;
+  }
 }
 
 
@@ -51,6 +67,19 @@ body {
   background: #fff;
   border-radius: var(--border-r);
 }
+@media (min-width: 1024px) {
+  .container {
+    top: 32px;
+  }
+  .header {
+    margin-bottom: 2.5em;
+  }
+  .form {
+    width: 556px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 
 .card-container {
@@ -64,6 +93,21 @@ body {
 .card {
   padding: 1.4em 0 0 0;
 }
+@media (min-width: 1024px) {
+  .card-container {
+    width: 90%;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    padding-bottom: 0;
+  }
+  .card {
+    text-align: left;
+    padding: 2em 1.9em;
+  }
+}
 
 
 .bottom {
@@ -71,7 +115,16 @@ body {
   min-height: 512px;
   height: calc(100vh - 300px);
 }
+@media (min-width: 1024px) {
+  .bottom {
+    min-height: unset;
+    height: 65vh;
+  }
+}
 
+#myMap {
+  height: 100%;
+}
 
 .attribution {
   position: absolute;
@@ -80,6 +133,12 @@ body {
   transform: translateX(-50%);
   text-align: center;
   top: calc(100% - 50px);
+}
+@media (min-width: 1024px) {
+  .attribution {
+    top: unset;
+    bottom: 10px;
+  }
 }
 
 /* ELEMENTS */
@@ -90,7 +149,12 @@ body {
   font-size: calc(var(--font-s) * 1.39);
   margin-bottom: 1.1em;
 }
-
+@media (min-width: 1024px) {
+  .header__title {
+    font-size: calc(var(--font-s) * 1.68);
+    margin-bottom: .87em;
+  }
+}
 
 .form__input,
 .form__btn {
@@ -108,8 +172,19 @@ body {
   background: black;
   border-top-right-radius: var(--border-r);
   border-bottom-right-radius: var(--border-r);
+  transition: background .3s ease-in-out;
 }
+@media (min-width: 1024px) {
+  .form__input:hover {
+    cursor: pointer;
 
+  }
+  .form__btn:hover {
+    background: var(--v-dark-gray);
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+  }
+}
 
 .card__title {
   color: var(--dark-gray);
@@ -119,6 +194,17 @@ body {
 .card__content {
   margin-top: .3em;
   font-weight: var(--bold);
+  color: var(--v-dark-gray);
+}
+@media (min-width: 1024px) {
+  .card__title {
+    letter-spacing: 1.5px;
+  }
+  .card__content {
+    margin-top: .5em;
+    font-size: calc(var(--font-s) * 1.35);
+  }
+  
 }
 
 
