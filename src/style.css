@@ -101,19 +101,22 @@ input {
     margin-right: auto;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    padding-bottom: 0;
+    padding: 2em 0;
   }
   .card {
     text-align: left;
-    padding: 2em 1.9em;
+    padding: 0 1.9em;
+  }
+  .card:not(:last-child) {
+    border-right: 1PX solid var(--dark-gray);
   }
 }
 
 
 .bottom {
-  background: yellowgreen;
   min-height: 512px;
   height: calc(100vh - 300px);
+  z-index: -2;
 }
 @media (min-width: 1024px) {
   .bottom {
@@ -124,6 +127,7 @@ input {
 
 #myMap {
   height: 100%;
+  z-index: 1;
 }
 
 .attribution {
