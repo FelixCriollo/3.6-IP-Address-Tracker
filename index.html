@@ -32,22 +32,22 @@
       <main class="card-container">
         <div class="card">
           <h2 class="card__title">IP Address</h2>
-          <div class="card__content ip">192.121.121.122</div>
+          <div class="card__content" id="ip"></div>
         </div>
         
         <div class="card">
           <h2 class="card__title">Location</h2>
-          <div class="card__content location">San juan de Miraflores. Lima</div>
+          <div class="card__content" id="location"></div>
         </div>
         
         <div class="card">
           <h2 class="card__title">Timezone</h2>
-          <div class="card__content timezone">UTC <!-- add offset value dynamically using the API --></div>
+          <div class="card__content" id="timezone"></div>
         </div>
         
         <div class="card">
           <h2 class="card__title">ISP</h2>
-          <div class="card__content isp">La pampa Pampa</div>
+          <div class="card__content" id="isp"></div>
         </div>
       </main>
     </div>
@@ -62,10 +62,10 @@
     </div>
   </section>
 
-  <script type="module" src="src/index.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script type="module" src="src/index.js"></script>
    <script src="src/map.js"></script>
 </body>
 </html>

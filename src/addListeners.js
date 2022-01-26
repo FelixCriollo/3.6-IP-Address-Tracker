@@ -1,3 +1,5 @@
+import printData from "./printData.js";
+
 // Set the input event listener "keypress"
 const setInputListener = () => {
   console.log("Show one time Input");
@@ -20,7 +22,10 @@ const setSubmitListener = () => {
   
   $form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(e.target.location.value);
+    
+    e.target.location.value === "" 
+    ? printData()
+    : printData(e.target.location.value)    
   })
 }
 
